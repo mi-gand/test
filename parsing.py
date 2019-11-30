@@ -45,13 +45,7 @@ def check_udaren(word_check):
 
 # 3------------------ начало программы -----------------------------------------------------------------------------
 word = input("Введите слово - ")
-
 check_result = check_accentonline(word)
-
-
-
-# check_result = '404'  # эта строка для отладки, в итоговой программе её нужно убрать !!!!!!!!
-
 
 if check_result == 'Запрашиваемое слово отсутсвует в базе или не существует':
     check_result = check_udaren(word)
@@ -79,16 +73,3 @@ else:
         print(check_result.replace('ю´', 'ю́'))
     if check_result.replace('я´', 'я́') != check_result:
         print(check_result.replace('я´', 'я́'))
-
-
-    #проверочное слово словаря - "орально"
-
-
-
-
-
-
-
-
-
-
