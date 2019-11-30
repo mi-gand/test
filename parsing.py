@@ -16,8 +16,8 @@ def check_accentonline(word_check):
         site_symbol = "&#x301;"  # как обозначено ударение на сайте
         str_start = data.find('<span class="word-accent">') + len(
             '<span class="word-accent">')
-        str_start_txt = data.find('<meta name="description" content="') + len(  #1
-            '<meta name="description" content="' )                              #2
+        str_start_txt = data.find('<meta name="description" content="') + len(  
+            '<meta name="description" content="' )                              
 
         return data[
                str_start:(str_start + len(word) + len(site_symbol))].replace(
