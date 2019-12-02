@@ -21,7 +21,7 @@ def check_accentonline(word_check):
 
         return data[
                str_start:(str_start + len(word) + len(site_symbol))].replace(
-            site_symbol, "´")
+            site_symbol, chr(769))
 
 
 # конец процедуры разбора ударения с сайта https://accentonline.ru/
@@ -51,25 +51,4 @@ if check_result == 'Запрашиваемое слово отсутсвует �
     check_result = check_udaren(word)
     print(check_result)
 else:
-    if check_result.replace('а´', 'а́') != check_result:
-        print(check_result.replace('а´', 'а́'))
-    if check_result.replace('е´', 'е́') != check_result:
-        print(check_result.replace('е´', 'е́'))
-    if check_result.replace('ё´', 'ё́') != check_result:
-        print(check_result.replace('ё´', 'ё́'))
-    if check_result.replace('и´', 'и́') != check_result:
-        print(check_result.replace('и´', 'и́'))
-    if check_result.replace('и´', 'и́') != check_result:
-        print(check_result.replace('и´', 'и́'))
-    if check_result.replace('о´', 'о́') != check_result:
-        print(check_result.replace('о´', 'о́'))
-    if check_result.replace('у´', 'у́') != check_result:
-        print(check_result.replace('у´', 'у́'))
-    if check_result.replace('ы´', 'ы́') != check_result:
-        print(check_result.replace('ы´', 'ы́'))
-    if check_result.replace('э´', 'э́') != check_result:
-        print(check_result.replace('э´', 'э́'))
-    if check_result.replace('ю´', 'ю́') != check_result:
-        print(check_result.replace('ю´', 'ю́'))
-    if check_result.replace('я´', 'я́') != check_result:
-        print(check_result.replace('я´', 'я́'))
+    print(check_result)
